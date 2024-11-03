@@ -50,7 +50,8 @@
             @endforeach
 
         </tbody>
-</table>    
+</table>  
 
+{!! $angsuran->links('pagination::bootstrap-4') !!}
 @endsection
 

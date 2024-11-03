@@ -116,8 +116,8 @@ class PinjamanController extends Controller
     public function angsuran($id){
 
         $pinjaman = Pinjaman::findOrFail($id);
-        $angsuran = Angsuran::all();
         
+        $angsuran = Angsuran::where('id_pinjaman', $id)->paginate(5);        
         // Ambil jumlah angsuran yang sudah dibayar berdasarkan id_pinjaman dan status == 1;
 
         $jumlahDiangsur = Angsuran::where('id_pinjaman', $id)
