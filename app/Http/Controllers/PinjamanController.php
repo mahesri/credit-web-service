@@ -88,18 +88,19 @@ class PinjamanController extends Controller
         $pinjaman->save();
 
         // Tentukan jatuh tempo 
-        $tanggalJatuhTempo = Carbon::parse($request->tanggal_jatuh_tempo);
+        $tanggalJatuhTempo = Carbon::parse($request->tl_jt);
 
         // Entri tabel angsuran
 
         for($i = 1; $i <= $request->diangsur_kali; $i++){
 
             $angsuran = new Angsuran();
-            $angsuran->id_pinjaman = $pinjaman->id_pinjaman;
-            $angsuran->id_anggota = $request->id_anggota;
+            $angsuran->id_pinjaman = $request->id_pinjaman;
+            $angsuran->id_anggota = $request->nama_anggota;
+            $angsuran->tanggal_pembayaran = $tanggalJatuhTempo;
             $angsuran->tanggal_jatuh_tempo = $tanggalJatuhTempo;
             $angsuran->angsuran_ke = $i;
-            $angsuran->besar_angsuran = $request->besar_angsuran;
+            $angsuran->besar_angsuran = $bpk;
             $angsuran->status = 0;
             $angsuran->save();
 
