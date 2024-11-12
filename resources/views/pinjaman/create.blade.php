@@ -204,9 +204,15 @@
         <a href="{{ route('pinjaman.index',) }}" class="btn btn-default">Kembali</a>
 
     </div>
-
 </form>
 
-
-
+<script src=" {{ asset('../js/pinjamanAjax.js') }}" defer></script>
+@vite('resources/js/pinjamanAjax.js')
 @endsection
+
+
+{{-- 
+@section('scripts')
+    <!-- Include the AJAX script for the form submission -->
+    <script src="{{ asset('../js/pinjamanAjax.js') }}" defer></script>
+@endsection --}}

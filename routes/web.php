@@ -72,13 +72,18 @@ Route::resource('pinjaman', PinjamanController::class);
 
 // Route::get('pinjaman',[PinjamanController::class,'index']);
 
-Route::get('pinjaman/create',[PinjamanController::class,'create'])->name('pinjaman.create');
+Route::get('pinjaman/create',[PinjamanController::class,
+'create'])->name('pinjaman.create');
 
-Route::get('pinjaman/create',[PinjamanController::class,'create'])->name('pinjaman.create');
+Route::get('pinjaman/create',[PinjamanController::class,
+'create'])->name('pinjaman.create');
 
-Route::get('pinjaman/angsuran/{id}',[PinjamanController::class,'angsuran'])->name('pinjaman.angsuran');
+Route::get('pinjaman/angsuran/{id}',[PinjamanController::class,
+'angsuran'])->name('pinjaman.angsuran');
 
-Route::get('pinjaman/transAngsuran/{id}',[PinjamanController::class,'transAngsuran'])->name('pinjaman.transAngsuran');
+Route::get('pinjaman/transAngsuran/{id}',[PinjamanController::class,
+'transAngsuran'])->name('pinjaman.transAngsuran');
 
-Route::PUT('pinjaman/storeAngsuran/{id}',[PinjamanController::class,'storeAngsuran'])->name('pinjaman.storeAngsuran');
+Route::PUT('pinjaman/storeAngsuran/{id}',[PinjamanController::class,
+'storeAngsuran'])->name('pinjaman.storeAngsuran');
 

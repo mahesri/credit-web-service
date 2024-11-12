@@ -4,7 +4,6 @@
 <div class="container">
 <h1>Tabel Pinjaman</h1>
 
-
 @if($message = Session::get('message'))
     <div class="alert alert-success martop-sm">
         <p>{{$message}}</p>
